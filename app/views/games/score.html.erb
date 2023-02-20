@@ -1,0 +1,14 @@
+<div class="container">
+<h1> Result</h1>
+
+  <% if @eng_word == true %>
+  <% guess_array = params["guess"].split("")%>
+  <% letters_array = params["letters"].split%>
+      <% if (guess_array - letters_array).empty? %>
+      <p> Congratulation! <%= params["guess"] %> is a english word </p>
+      <% end %>
+    <% else %>
+    <p> Wrong!</p>
+  <% end %>
+  <a> <%= link_to "New word?", new_path %> </a>
+</div>
